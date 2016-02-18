@@ -7,7 +7,15 @@ gem 'devise'
 gem "paperclip", "~> 4.3"
 #gem 'bcrypt-ruby', '~> 3.0.0'
 # Use sqlite3 as the database for Active Record
+group :development, :test do
 gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '0.15.1'
+  gem 'rails_12factor'
+end
+
 # Use SCSS for stylesheets
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
