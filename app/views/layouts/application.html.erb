@@ -45,7 +45,10 @@
   </div>
   <!-- /.container -->
 </nav>
-
+<p>
+  <%= flash[:success] unless flash[:success].blank? %>
+  <%= flash[:error] unless flash[:error].blank? %>
+</p>
 <!-- Page Content -->
 <div class="container">
 
